@@ -11,6 +11,7 @@ Summary:    Easy implementation of Python extensions
 Source:     http://www.cpan.org/modules/by-module/Inline/%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRequires: perl-devel
+BuildRequires: python-devel
 BuildRequires: perl(Inline)
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
