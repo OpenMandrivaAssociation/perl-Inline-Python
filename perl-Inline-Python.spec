@@ -12,6 +12,7 @@ Source:     http://www.cpan.org/modules/by-module/Inline/%{realname}-%{version}.
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRequires: perl-devel
 BuildRequires: python-devel
+BuildRequires: perl(CGI)
 BuildRequires: perl(Inline)
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
