@@ -1,5 +1,5 @@
 %define realname   Inline-Python
-%define version    0.26
+%define version    0.27
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
