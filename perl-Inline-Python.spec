@@ -1,20 +1,21 @@
-%define realname   Inline-Python
-%define version    0.29
-%define release    %mkrel 1
+%define upstream_name    Inline-Python
+%define upstream_version 0.29
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Easy implementation of Python extensions
-Source:     http://www.cpan.org/modules/by-module/Inline/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRequires: perl-devel
-BuildRequires: python-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Inline/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(CGI)
 BuildRequires: perl(Inline)
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRequires: perl-devel
+BuildRequires: python-devel
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The 'Inline::Python' module allows you to put Python source code directly
@@ -31,7 +32,7 @@ which gives you access to the Perl interpreter.
 
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor < /dev/null
