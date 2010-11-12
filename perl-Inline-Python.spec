@@ -1,9 +1,9 @@
 %define upstream_name    Inline-Python
-%define upstream_version 0.36
+%define upstream_version 0.37
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:    Easy implementation of Python extensions
 License:    GPL+ or Artistic
