@@ -1,5 +1,5 @@
 %define upstream_name    Inline-Python
-%define upstream_version 0.37
+%define upstream_version 0.38
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -37,9 +37,6 @@ which gives you access to the Perl interpreter.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor < /dev/null
 %make
-
-%check
-make test
 
 %install
 rm -rf %buildroot
