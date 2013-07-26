@@ -1,15 +1,15 @@
 %define upstream_name    Inline-Python
-%define upstream_version 0.39
+%define upstream_version 0.42
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	2
+Version:    %perl_convert_version 0.42
+Release:	1
 
 Summary:    Easy implementation of Python extensions
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Inline/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Inline/Inline-Python-0.42.tar.gz
 
 BuildRequires: perl(CGI)
 BuildRequires: perl(Inline)
@@ -152,7 +152,7 @@ rm -rf %buildroot
 - rebuild
 - own dir
 
-* Fri Aug 15 2003 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 0.20-6mdk
+* Fri Aug 15 2003 Per Ã˜yvind Karlsen <peroyvind@linux-mandrake.com> 0.20-6mdk
 - rebuild for new python
 - disable test
 
@@ -175,4 +175,5 @@ rm -rf %buildroot
 - disable test until we can figure out why it fails
 - from andi payn <payn@myrealbox.com> :
   - first specfile, based loosely on perl-Inline.spec
+
 
