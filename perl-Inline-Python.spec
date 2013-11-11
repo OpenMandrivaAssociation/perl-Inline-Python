@@ -1,21 +1,20 @@
 %define upstream_name    Inline-Python
-%define upstream_version 0.42
+%define upstream_version 0.43
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 0.42
+Version:    %perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:    Easy implementation of Python extensions
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Inline/Inline-Python-0.42.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Inline/Inline-Python-%{upstream_version}.tar.gz
 
 BuildRequires: perl(CGI)
 BuildRequires: perl(Inline)
 BuildRequires: perl-devel
 BuildRequires: python-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The 'Inline::Python' module allows you to put Python source code directly
@@ -39,14 +38,11 @@ which gives you access to the Perl interpreter.
 %make
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 %clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc README Changes
 %{_mandir}/man3/*
 %perl_vendorarch/Inline
@@ -175,5 +171,6 @@ rm -rf %buildroot
 - disable test until we can figure out why it fails
 - from andi payn <payn@myrealbox.com> :
   - first specfile, based loosely on perl-Inline.spec
+
 
 
