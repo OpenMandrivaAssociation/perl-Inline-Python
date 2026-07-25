@@ -1,15 +1,15 @@
 %define upstream_name    Inline-Python
-%define upstream_version 0.43
+%define upstream_version 0.58
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Version:    %{upstream_version}
+Release:	1
 
 Summary:    Easy implementation of Python extensions
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Inline/Inline-Python-%{upstream_version}.tar.gz
+Url:        https://github.com/niner/inline-python-pm
+Source0:    https://cpan.metacpan.org/authors/id/N/NI/NINE/Inline-Python-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(CGI)
