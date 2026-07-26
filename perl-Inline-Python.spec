@@ -1,15 +1,13 @@
 %define upstream_name    Inline-Python
-%define upstream_version 0.58
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    0.58
+Release:	2
 
 Summary:    Easy implementation of Python extensions
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/niner/inline-python-pm
-Source0:    https://cpan.metacpan.org/authors/id/N/NI/NINE/Inline-Python-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/N/NI/NINE/Inline-Python-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(CGI)
@@ -32,7 +30,7 @@ which gives you access to the Perl interpreter.
 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor < /dev/null
@@ -104,9 +102,7 @@ which gives you access to the Perl interpreter.
 
 * Wed Aug 05 2009 Jérôme Quelin <jquelin@mandriva.org> 0.290.0-1mdv2010.0
 + Revision: 410094
-- rebuild using %%perl_convert_version
-
-* Wed Jul 08 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.29-1mdv2010.0
+- rebuild using %0.58 Wed Jul 08 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.29-1mdv2010.0
 + Revision: 393526
 - update to new version 0.29
 
